@@ -2,7 +2,7 @@
 #-----------------------------
 #Data Structures
 #List - ordered collection of items, mutable(changeable) : [square ]
-list1 = [1,2,3,4,5,'a','Dhiraj',"Upadhyaya",True]  #list type of object with data
+list1 = [1,2,3,4,5,'a','Paridhi',"Chaturvedi",True]  #list type of object with data
 list1  #print when through spyder
 type(list1)  #type of object
 print(list1)  #print when running complete file
@@ -74,7 +74,7 @@ set2.intersection(set3) #set2 & set
 type(set2)
 print(set2)
 dir(set2)  #functions in set, cannot be subscript set2[1]
-
+set3={[a,b,c,a]}
 #%%%frozen ( round bracket, comma)
 #frozen set- accepts iterable object as input parameter.
 tupleFZ1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9) 
@@ -193,11 +193,10 @@ np3.reshape((-1,1))  #1 column from 2 column
 #https://mode.com/python-tutorial/pandas-dataframe/
 #https://pandas.pydata.org/pandas-docs/stable/
 
-import pandas as pd
-pd?
+import pandas as pd #importing pandas with alias name pd
 dir(pd)
 
-df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
+df1 = pd.DataFrame({'rollno':[1,2,3,4,5], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja","Paridhi" ], 'marks':[ 40, 50, 60.5, 70, 100 ], 'gender':['M', 'M','M', 'F','F'], 'course':['B.Tech', 'MBA', 'MBA', 'MBA', 'B.Tech']})
 df1
 type(df1) 
 
@@ -216,7 +215,7 @@ df1.groupby('gender').aggregate({'marks': [np.mean, 'max','min','std','count']})
 import matplotlib.pyplot as plt
 df1.groupby('gender').size()
 df1.groupby('gender').size().plot(kind='bar')
-
+#don't plot pie plot for more than 5 categories, otherwise you won't be able to differentiate between the categories
 plt.hist(df1['marks'])
 
 #https://seaborn.pydata.org/index.html
@@ -232,7 +231,7 @@ sns.pairplot(iris)  #relationship diagrams
 
 #%% #Load Inbuilt Datasets
 
-#pip install pydataset
+pip install pydataset
 from pydataset import data
 data('iris')
 data('mtcars')
