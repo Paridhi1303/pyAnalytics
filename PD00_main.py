@@ -12,20 +12,22 @@ mtcarsDF = mtcars
 
 mtcarsDF
 
-#%%describing
+#%%describing and understanding the data structure
 mtcarsDF.shape
 mtcarsDF.head(3)
 mtcarsDF.tail(4)
-mtcarsDF.describe
+mtcarsDF.describe() #use round bracket with describe
 mtcarsDF.columns
 mtcarsDF.dtypes
 
 mtcarsDF.index  #here index by rownames
+#mtcarsDF[Ford Pantera L]
 type(mtcarsDF)
 
 mtcarsDF.select_dtypes(include=['int64'])
 mtcarsDF.select_dtypes(exclude=['int64'])
 mtcarsDF.isna()
+help(mtcarsDF.isna())
 mtcarsDF.notna()
 id(mtcarsDF)
 mtcars.empty
@@ -162,7 +164,7 @@ mtcarsDF.sort_values(by=['cyl','mpg'], ascending=[True, False]).head(n=20)
 mtcarsDF.describe()
 mtcarsDF.groupby('gear')
 mtcarsDF.groupby(['gear'])
-mtcarsDF.groupby(['gear']).groups.keys()
+mtcarsDF.groupby(['gear']).groups.keys() #gives all keys under which the data is going to be grouped example 3,4 and 5 gears
 mtcarsDF.groupby(['gear']).groups[3] #cars of group with gear 3
 mtcarsDF.groupby('carb').first()  #first item of each group
 mtcarsDF.groupby('carb').last()
