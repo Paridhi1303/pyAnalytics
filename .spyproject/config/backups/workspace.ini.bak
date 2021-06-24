@@ -4,9 +4,9 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = empty-project-type
-recent_files = ['C:\\Users\\rukap\\.spyder-py3\\temp.py', 'daily1.py']
+recent_files = ['DT02_diabetis.py', 'DT_diabetis.py']
 
 [main]
 version = 0.2.0
-recent_files = []
+recent_files = ['C:\\Users\\rukap\\.spyder-py3\\temp.py', 'DT_diabetis.py', 'Clustering.py']
 
